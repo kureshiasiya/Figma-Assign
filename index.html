@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Responsive Widget Layout</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side (Empty) -->
+      <div class="left-side"></div>
+
+      <!-- Right Side (Widgets) -->
+      <div class="right-side">
+        <!-- About Me Widget -->
+        <div class="widget about-me">
+          <div class="tabs">
+            <button class="tab active" onclick="showTab('about')">
+              About Me
+            </button>
+            <button class="tab" onclick="showTab('experience')">
+              Experiences
+            </button>
+            <button class="tab" onclick="showTab('recommended')">
+              Recommended
+            </button>
+          </div>
+
+          <!-- About Me Content -->
+          <div class="tab-content" id="about">
+            <h2>About Me</h2>
+            <p>
+              Hello! I'm Asiya, a passionate web developer with a love for
+              creating interactive and dynamic web experiences.
+            </p>
+          </div>
+
+          <!-- Experience Content -->
+          <div class="tab-content" id="experience" style="display: none">
+            <h2>Experiences</h2>
+            <ul>
+              <li>
+                <strong>Frontend Developer Intern at XYZ Company</strong> -
+                Developed responsive web applications using React.
+              </li>
+              <li>
+                <strong>Freelance Web Developer</strong> - Designed and built
+                customized websites for various clients.
+              </li>
+              <li>
+                <strong>Open Source Contributor</strong> - Contributed to
+                open-source projects on GitHub.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Recommended Content -->
+          <div class="tab-content" id="recommended" style="display: none">
+            <h2>Recommended</h2>
+            <p>
+              Here are some resources and tools that I highly recommend for
+              developers:
+            </p>
+            <ul>
+              <li>
+                <a href="https://reactjs.org/" target="_blank"
+                  >React Documentation</a
+                >
+                - Official documentation for getting started with React.
+              </li>
+              <li>
+                <a href="https://developer.mozilla.org/" target="_blank"
+                  >MDN Web Docs</a
+                >
+                - Comprehensive resources for web technologies like HTML, CSS,
+                and JavaScript.
+              </li>
+              <li>
+                <a href="https://www.freecodecamp.org/" target="_blank"
+                  >freeCodeCamp</a
+                >
+                - Free coding tutorials and challenges.
+              </li>
+              <li>
+                <a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a>
+                - A great blog for CSS tips, tricks, and techniques.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Gallery Widget -->
+        <div class="widget gallery">
+          <div class="gallery-controls">
+            <button class="gallery-btn">Gallery</button>
+            <button class="add-image-btn" onclick="addImage()">
+              + Add Image
+            </button>
+
+            <i
+              class="fa-sharp fa-solid fa-arrow-left nav-btn left-arrow"
+              onclick="navigateGallery('prev')"
+            ></i>
+            <i
+              class="fa-sharp fa-solid fa-arrow-right nav-btn right-arrow"
+              onclick="navigateGallery('next')"
+            ></i>
+          </div>
+          <div class="gallery-content">
+            <div class="images">
+              <img src="laptop.png" alt="Placeholder 1" />
+              <img src="coding.avif" alt="Placeholder 2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
